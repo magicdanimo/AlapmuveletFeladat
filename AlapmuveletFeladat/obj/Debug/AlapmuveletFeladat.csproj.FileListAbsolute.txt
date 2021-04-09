@@ -1,0 +1,10 @@
+C:\Users\win7\source\repos\AlapmuveletFeladat\AlapmuveletFeladat\bin\Debug\AlapmuveletFeladat.exe.config
+C:\Users\win7\source\repos\AlapmuveletFeladat\AlapmuveletFeladat\bin\Debug\AlapmuveletFeladat.exe
+C:\Users\win7\source\repos\AlapmuveletFeladat\AlapmuveletFeladat\bin\Debug\AlapmuveletFeladat.pdb
+C:\Users\win7\source\repos\AlapmuveletFeladat\AlapmuveletFeladat\obj\Debug\AlapmuveletFeladat.csprojAssemblyReference.cache
+C:\Users\win7\source\repos\AlapmuveletFeladat\AlapmuveletFeladat\obj\Debug\AlapmuveletFeladat.Form1.resources
+C:\Users\win7\source\repos\AlapmuveletFeladat\AlapmuveletFeladat\obj\Debug\AlapmuveletFeladat.Properties.Resources.resources
+C:\Users\win7\source\repos\AlapmuveletFeladat\AlapmuveletFeladat\obj\Debug\AlapmuveletFeladat.csproj.GenerateResource.cache
+C:\Users\win7\source\repos\AlapmuveletFeladat\AlapmuveletFeladat\obj\Debug\AlapmuveletFeladat.csproj.CoreCompileInputs.cache
+C:\Users\win7\source\repos\AlapmuveletFeladat\AlapmuveletFeladat\obj\Debug\AlapmuveletFeladat.exe
+C:\Users\win7\source\repos\AlapmuveletFeladat\AlapmuveletFeladat\obj\Debug\AlapmuveletFeladat.pdb
