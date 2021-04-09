@@ -31,12 +31,14 @@
             this.valasztottMuvelet = new System.Windows.Forms.ComboBox();
             this.probalkozas = new System.Windows.Forms.TextBox();
             this.probalkozasGomb = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.valasz = new System.Windows.Forms.Button();
+            this.kerdesekSzama = new System.Windows.Forms.Label();
+            this.probakSzam = new System.Windows.Forms.Label();
+            this.eredmeny = new System.Windows.Forms.Label();
             this.kerdes = new System.Windows.Forms.Label();
             this.viszajelzes = new System.Windows.Forms.Label();
+            this.statisztika = new System.Windows.Forms.Panel();
+            this.statisztika.SuspendLayout();
             this.SuspendLayout();
             // 
             // valasztottMuvelet
@@ -71,41 +73,42 @@
             this.probalkozasGomb.UseVisualStyleBackColor = true;
             this.probalkozasGomb.Click += new System.EventHandler(this.probalkozas_Click);
             // 
-            // button2
+            // valasz
             // 
-            this.button2.Location = new System.Drawing.Point(628, 374);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Válasz";
-            this.button2.UseVisualStyleBackColor = true;
+            this.valasz.Location = new System.Drawing.Point(628, 374);
+            this.valasz.Name = "valasz";
+            this.valasz.Size = new System.Drawing.Size(75, 23);
+            this.valasz.TabIndex = 3;
+            this.valasz.Text = "Válasz";
+            this.valasz.UseVisualStyleBackColor = true;
+            this.valasz.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
+            // kerdesekSzama
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(129, 305);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Kérdések Száma: n db";
+            this.kerdesekSzama.AutoSize = true;
+            this.kerdesekSzama.Location = new System.Drawing.Point(16, 20);
+            this.kerdesekSzama.Name = "kerdesekSzama";
+            this.kerdesekSzama.Size = new System.Drawing.Size(114, 13);
+            this.kerdesekSzama.TabIndex = 4;
+            this.kerdesekSzama.Text = "Kérdések Száma: n db";
             // 
-            // label2
+            // probakSzam
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 330);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Próbálkozások Száma: n db";
+            this.probakSzam.AutoSize = true;
+            this.probakSzam.Location = new System.Drawing.Point(16, 45);
+            this.probakSzam.Name = "probakSzam";
+            this.probakSzam.Size = new System.Drawing.Size(139, 13);
+            this.probakSzam.TabIndex = 5;
+            this.probakSzam.Text = "Próbálkozások Száma: n db";
             // 
-            // label3
+            // eredmeny
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 353);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Elért eredmény n%";
+            this.eredmeny.AutoSize = true;
+            this.eredmeny.Location = new System.Drawing.Point(16, 68);
+            this.eredmeny.Name = "eredmeny";
+            this.eredmeny.Size = new System.Drawing.Size(94, 13);
+            this.eredmeny.TabIndex = 6;
+            this.eredmeny.Text = "Elért eredmény n%";
             // 
             // kerdes
             // 
@@ -119,29 +122,39 @@
             // viszajelzes
             // 
             this.viszajelzes.AutoSize = true;
-            this.viszajelzes.Location = new System.Drawing.Point(129, 280);
+            this.viszajelzes.Location = new System.Drawing.Point(129, 283);
             this.viszajelzes.Name = "viszajelzes";
             this.viszajelzes.Size = new System.Drawing.Size(83, 13);
             this.viszajelzes.TabIndex = 8;
             this.viszajelzes.Text = "A válasz: helyes";
+            // 
+            // statisztika
+            // 
+            this.statisztika.Controls.Add(this.kerdesekSzama);
+            this.statisztika.Controls.Add(this.probakSzam);
+            this.statisztika.Controls.Add(this.eredmeny);
+            this.statisztika.Location = new System.Drawing.Point(573, 34);
+            this.statisztika.Name = "statisztika";
+            this.statisztika.Size = new System.Drawing.Size(200, 100);
+            this.statisztika.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.statisztika);
             this.Controls.Add(this.viszajelzes);
             this.Controls.Add(this.kerdes);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.valasz);
             this.Controls.Add(this.probalkozasGomb);
             this.Controls.Add(this.probalkozas);
             this.Controls.Add(this.valasztottMuvelet);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Alap Müvelet Gyakorlás";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.statisztika.ResumeLayout(false);
+            this.statisztika.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,12 +165,13 @@
         private System.Windows.Forms.ComboBox valasztottMuvelet;
         private System.Windows.Forms.TextBox probalkozas;
         private System.Windows.Forms.Button probalkozasGomb;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button valasz;
+        private System.Windows.Forms.Label kerdesekSzama;
+        private System.Windows.Forms.Label probakSzam;
+        private System.Windows.Forms.Label eredmeny;
         private System.Windows.Forms.Label kerdes;
         private System.Windows.Forms.Label viszajelzes;
+        private System.Windows.Forms.Panel statisztika;
     }
 }
 
