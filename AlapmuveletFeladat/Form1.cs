@@ -14,7 +14,13 @@ namespace AlapmuveletFeladat
     {
         private float helyesValasz;
         private string elotag = "A valasz: ";
-        private int probalkozasokSzama = 1;
+        private int probalkozasokSzama = 0;
+        private int helyesValaszokSzama = 0;
+        private int kerdesDb = 0;
+        private int szam1;
+        private int szam2;
+        private Random rnd = new Random();
+            
         public Form1()
         {
             InitializeComponent();
@@ -27,14 +33,11 @@ namespace AlapmuveletFeladat
 
         private void valasztottMuvelet_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (valasztottMuvelet.SelectedItem.ToString() == "/")
-            {
-                helyesValasz = 4 / 4;
-                kerdes.Text = "4 / 4";
-            }
+            kerdesGeneral();
+            
             
         }
-
+        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -46,18 +49,55 @@ namespace AlapmuveletFeladat
             probalkozasokSzama++;
             if (float.Parse(probalkozas.Text) == helyesValasz)
             {
-                
                 viszajelzes.Text = elotag + "helyes";
+                helyesValaszokSzama++;
             }
             else
             {
                 viszajelzes.Text = elotag + "helytelen";
             }
+            talalatiSzazalekKiir();
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
             viszajelzes.Text = elotag + helyesValasz;
+        }
+        private void kerdesGeneral()
+        {
+            kerdesDb++;
+            kerdesekSzama.Text = "Kérdések száma: " + kerdesDb + " db";
+            if (valasztottMuvelet.SelectedItem.ToString() == "/")
+            {
+
+                do
+                {
+                    szam2 = rnd.Next(1, 100);
+                    szam1 = rnd.Next(szam2, 100);
+                    
+                    helyesValasz = (float)szam1 / szam2;
+                } while (helyesValasz % 1 != 0);
+
+                kerdes.Text = "" + szam1 + "/" + szam2;
+            }
+        }
+
+        private void talalatiSzazalekKiir()
+        {
+            int talalatiSzazalek = 0;
+            if (helyesValaszokSzama != 0)
+            {
+                talalatiSzazalek = (int)((float)helyesValaszokSzama / probalkozasokSzama * 100);
+            }
+            else
+            {
+                talalatiSzazalek = 0;
+            }
+            eredmeny.Text = "Elért eredmény: " + talalatiSzazalek +"%";
+        }
+        private void ujkerdes_Click(object sender, EventArgs e)
+        {
+            kerdesGeneral();
         }
     }
 }

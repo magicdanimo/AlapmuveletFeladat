@@ -38,6 +38,7 @@
             this.kerdes = new System.Windows.Forms.Label();
             this.viszajelzes = new System.Windows.Forms.Label();
             this.statisztika = new System.Windows.Forms.Panel();
+            this.ujkerdes = new System.Windows.Forms.Button();
             this.statisztika.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             this.valasztottMuvelet.Name = "valasztottMuvelet";
             this.valasztottMuvelet.Size = new System.Drawing.Size(266, 21);
             this.valasztottMuvelet.TabIndex = 0;
+            this.valasztottMuvelet.Text = "MüveletVálasztás";
             this.valasztottMuvelet.SelectedIndexChanged += new System.EventHandler(this.valasztottMuvelet_SelectedIndexChanged);
             // 
             // probalkozas
@@ -90,7 +92,7 @@
             this.kerdesekSzama.Name = "kerdesekSzama";
             this.kerdesekSzama.Size = new System.Drawing.Size(114, 13);
             this.kerdesekSzama.TabIndex = 4;
-            this.kerdesekSzama.Text = "Kérdések Száma: n db";
+            this.kerdesekSzama.Text = "Kérdések Száma: 0 db";
             // 
             // probakSzam
             // 
@@ -99,7 +101,7 @@
             this.probakSzam.Name = "probakSzam";
             this.probakSzam.Size = new System.Drawing.Size(139, 13);
             this.probakSzam.TabIndex = 5;
-            this.probakSzam.Text = "Próbálkozások Száma: n db";
+            this.probakSzam.Text = "Próbálkozások Száma: 0 db";
             // 
             // eredmeny
             // 
@@ -108,41 +110,51 @@
             this.eredmeny.Name = "eredmeny";
             this.eredmeny.Size = new System.Drawing.Size(94, 13);
             this.eredmeny.TabIndex = 6;
-            this.eredmeny.Text = "Elért eredmény n%";
+            this.eredmeny.Text = "Elért eredmény 0%";
             // 
             // kerdes
             // 
             this.kerdes.AutoSize = true;
-            this.kerdes.Location = new System.Drawing.Point(129, 174);
+            this.kerdes.Location = new System.Drawing.Point(129, 177);
             this.kerdes.Name = "kerdes";
-            this.kerdes.Size = new System.Drawing.Size(49, 13);
+            this.kerdes.Size = new System.Drawing.Size(0, 13);
             this.kerdes.TabIndex = 7;
-            this.kerdes.Text = "30+500=";
             // 
             // viszajelzes
             // 
             this.viszajelzes.AutoSize = true;
-            this.viszajelzes.Location = new System.Drawing.Point(129, 283);
+            this.viszajelzes.Location = new System.Drawing.Point(129, 241);
             this.viszajelzes.Name = "viszajelzes";
-            this.viszajelzes.Size = new System.Drawing.Size(83, 13);
+            this.viszajelzes.Size = new System.Drawing.Size(50, 13);
             this.viszajelzes.TabIndex = 8;
-            this.viszajelzes.Text = "A válasz: helyes";
+            this.viszajelzes.Text = "A válasz:";
             // 
             // statisztika
             // 
             this.statisztika.Controls.Add(this.kerdesekSzama);
             this.statisztika.Controls.Add(this.probakSzam);
             this.statisztika.Controls.Add(this.eredmeny);
-            this.statisztika.Location = new System.Drawing.Point(573, 34);
+            this.statisztika.Location = new System.Drawing.Point(516, 196);
             this.statisztika.Name = "statisztika";
             this.statisztika.Size = new System.Drawing.Size(200, 100);
             this.statisztika.TabIndex = 9;
+            // 
+            // ujkerdes
+            // 
+            this.ujkerdes.Location = new System.Drawing.Point(401, 374);
+            this.ujkerdes.Name = "ujkerdes";
+            this.ujkerdes.Size = new System.Drawing.Size(75, 23);
+            this.ujkerdes.TabIndex = 10;
+            this.ujkerdes.Text = "Újkérdés";
+            this.ujkerdes.UseVisualStyleBackColor = true;
+            this.ujkerdes.Click += new System.EventHandler(this.ujkerdes_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ujkerdes);
             this.Controls.Add(this.statisztika);
             this.Controls.Add(this.viszajelzes);
             this.Controls.Add(this.kerdes);
@@ -172,6 +184,7 @@
         private System.Windows.Forms.Label kerdes;
         private System.Windows.Forms.Label viszajelzes;
         private System.Windows.Forms.Panel statisztika;
+        private System.Windows.Forms.Button ujkerdes;
     }
 }
 
